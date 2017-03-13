@@ -1,0 +1,4 @@
+-printconfiguration
+-optimizationpasses 5
+-allowaccessmodification
+-repackageclasses ''

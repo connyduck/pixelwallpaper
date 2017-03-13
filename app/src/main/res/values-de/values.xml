@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Colorful Pixels</string>
+    <string name="wallpaper_description">Ein farbenfrohes Pixelhintergrundbild</string>
+
+    <string name="pref_black_white">Schwarz-Weiß-Modus</string>
+    <string name="pref_black_white_summary">nur graue Pixel</string>
+    <string name="pref_black_white_colorful_summary">bunte Pixel</string>
+    
+    <string name="pref_touch">Farbe bei Berührung</string>
+
+    <string name="touch_no_touch">keine</string>
+    <string name="touch_white">weiß</string>
+    <string name="touch_black">schwarz</string>
+    <string-array name="pref_touch_entries">
+        <item>@string/touch_no_touch</item>
+        <item>@string/touch_white</item>
+        <item>@string/touch_black</item>
+    </string-array>
+    <string-array name="pref_touch_entries_color">
+        <item>@string/touch_no_touch</item>
+        <item>@string/touch_white</item>
+        <item>@string/touch_black</item>
+        <item>rot</item>
+        <item>grün</item>
+        <item>blau</item>
+    </string-array>
+
+    <string name="pref_border">Schwarzer Rahmen um Pixel</string>
+    
+    <string name="pref_pixel">Größe der Pixel</string>
+    <string-array name="pref_pixel_entries">
+        <item>klein</item>
+        <item>mittel</item>
+        <item>groß</item>
+    </string-array>
+
+    <string name="pref_frame">Aktualisierungsfrequenz</string>
+    <string-array name="pref_frame_entries">
+        <item>hoch</item>
+        <item>mittel</item>
+        <item>niedrig</item>
+    </string-array>
+
+    <string name="author">Conny Duck</string>
+
+    <string name="pref_open_source_title">This app is Open Source</string>
+    <string name="pref_open_source_summary">Get the code on Github!</string>
+
+
+</resources>

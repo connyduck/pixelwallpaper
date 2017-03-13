@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="pref_black_white"
+        android:title="@string/pref_black_white"
+        android:defaultValue="@bool/pref_black_white_default" />
+     <ListPreference
+        android:key="pref_touch"
+        android:title="@string/pref_touch"
+        android:dialogTitle="@string/pref_touch"
+        android:entries="@array/pref_touch_entries_color"
+        android:entryValues="@array/pref_touch_values_color"
+        android:defaultValue="@string/pref_touch_default" />
+    <CheckBoxPreference
+        android:key="pref_border"
+        android:title="@string/pref_border"
+        android:defaultValue="@bool/pref_border_default" />
+    <ListPreference
+        android:key="pref_pixel"
+        android:title="@string/pref_pixel"
+        android:dialogTitle="@string/pref_pixel"
+        android:entries="@array/pref_pixel_entries"
+        android:entryValues="@array/pref_pixel_values"
+        android:defaultValue="@string/pref_pixel_default" />
+    <ListPreference
+        android:key="pref_frame"
+        android:title="@string/pref_frame"
+        android:dialogTitle="@string/pref_frame"
+        android:entries="@array/pref_frame_entries"
+        android:entryValues="@array/pref_frame_values"
+        android:defaultValue="@string/pref_frame_default" />
+    <Preference
+        android:key="pref_os"
+        android:title="@string/pref_open_source_title"
+        android:summary="@string/pref_open_source_summary" />
+</PreferenceScreen> 

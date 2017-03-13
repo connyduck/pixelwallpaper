@@ -1,0 +1,79 @@
+<resources>
+
+    <string name="app_name">Colorful Pixels</string>
+    <string name="wallpaper_description">A colorful Pixel Live Wallpaper</string>
+
+    <string name="pref_black_white">black&amp;white-mode</string>
+    <string name="pref_black_white_summary">only black and white pixels</string>
+    <string name="pref_black_white_colorful_summary">colored pixels</string>
+    
+    <string name="pref_touch">touch color</string>
+
+    <string name="touch_no_touch">no touch</string>
+    <string name="touch_white">white</string>
+    <string name="touch_black">black</string>
+    <string-array name="pref_touch_entries">
+        <item>@string/touch_no_touch</item>
+        <item>@string/touch_white</item>
+        <item>@string/touch_black</item>
+    </string-array>
+    <string-array name="pref_touch_entries_color">
+        <item>@string/touch_no_touch</item>
+        <item>@string/touch_white</item>
+        <item>@string/touch_black</item>
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+    </string-array>
+    <string-array name="pref_touch_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_touch_values_color" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="pref_touch_default"  translatable="false">1</string>
+    
+    <string name="pref_border">black border around pixels</string>
+    <bool name="pref_border_default">false</bool>
+    <bool name="pref_black_white_default">false</bool>
+
+    <string name="pref_pixel">pixel size</string>
+    <string-array name="pref_pixel_entries">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+    <string-array name="pref_pixel_values"  translatable="false">
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+    </string-array>
+
+    <string name="pref_frame">frame rate</string>
+    <string-array name="pref_frame_entries">
+        <item>high</item>
+        <item>medium</item>
+        <item>low</item>
+    </string-array>
+    <string-array name="pref_frame_values"  translatable="false">
+        <item>200</item>
+        <item>800</item>
+        <item>1600</item>
+    </string-array>
+    <string name="pref_frame_default"  translatable="false">800</string>
+
+    <string name="author">Conny Duck</string>
+
+    <string name="pref_open_source_title">This app is Open Source</string>
+    <string name="pref_open_source_summary">Get the code on Github!</string>
+
+
+
+</resources>
