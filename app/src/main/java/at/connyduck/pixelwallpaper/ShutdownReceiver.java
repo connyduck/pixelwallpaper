@@ -3,6 +3,7 @@ package at.connyduck.pixelwallpaper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 public class ShutdownReceiver extends BroadcastReceiver {
     private PixelWallpaperService.PixelWallpaperEngine pwe;
@@ -13,8 +14,8 @@ public class ShutdownReceiver extends BroadcastReceiver {
     
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		     
-        if("android.intent.action.ACTION_SHUTDOWN".equals(intent.getAction())) {
+
+        if(Intent.ACTION_SHUTDOWN.equals(intent.getAction())) {
         	pwe.onShutdown();
         }
 		

@@ -2,6 +2,7 @@ package at.connyduck.pixelwallpaper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 
 public class PersistenceManager {
 
-	private static final String fileID = "at.connyduck.pixelwallpaper save file";
+	private static final String fileID = "at.connyduck.pixelwallpaper.save";
 	private static final String preferenceID = "at.connyduck.pixelwallpaper prefs";
 
 	private Context context;
@@ -45,6 +46,7 @@ public class PersistenceManager {
 			fis = context.openFileInput(fileID);
 		} catch (FileNotFoundException e) {
 			//first time load
+			Log.i("PersistenceManager", Log.getStackTraceString(e));
 			return false;
 		}
 		
@@ -58,11 +60,10 @@ public class PersistenceManager {
 				i.close();
 				fis.close();
 
-			} catch (IOException e) {
+			} catch (IOException | ClassNotFoundException e) {
+				Log.w("PersistenceManager", Log.getStackTraceString(e));
 				return false;
-			} catch (ClassNotFoundException e) {
-				return false;
-			} 
+			}
 		}
 
 		SharedPreferences pref = context.getSharedPreferences(preferenceID, 0);
@@ -86,7 +87,7 @@ public class PersistenceManager {
 		try {
 			fos = context.openFileOutput(fileID, Context.MODE_PRIVATE);
 		} catch (FileNotFoundException e) {
-			//Log.d("PersistenceManager", "FileNotFoundException");
+			Log.w("PersistenceManager", Log.getStackTraceString(e));
 		}
 		
 		ObjectOutputStream o;
@@ -102,7 +103,7 @@ public class PersistenceManager {
 			}
 
 		} catch (IOException e) {
-			//Log.d("PersistenceManager", "IOException "+e);
+			Log.w("PersistenceManager", Log.getStackTraceString(e));
 		}
 
 		SharedPreferences.Editor editor = context.getSharedPreferences(preferenceID, 0).edit();

@@ -1,8 +1,11 @@
 package at.connyduck.pixelwallpaper;
 
-public class IntList {
+import java.io.Serializable;
+
+public class IntList implements Serializable {
 
     private static final int MIN_CAPACITY_INCREMENT = 12;
+    private static final long serialVersionUID = -4046407753817880014L;
 
     private int size;
     private int[] array;
