@@ -44,7 +44,7 @@
     <string name="author">Conny Duck</string>
 
     <string name="pref_open_source_title">Diese App ist Open Source</string>
-    <string name="pref_open_source_summary">Der Quellcode ist auf Github verfügbar</string>
+    <string name="pref_open_source_summary">Der Quellcode ist auf GitHub verfügbar</string>
 
 
 </resources>
