@@ -47,20 +47,23 @@ public class PreferencesActivity extends PreferenceActivity implements SharedPre
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
 
-
         boolean blackWhite = prefs.getBoolean(PREF_BLACK_WHITE, true);
 
         if(blackWhite) {
             findPreference(PREF_BLACK_WHITE).setSummary(R.string.pref_black_white_summary);
 
+            ((ListPreference)findPreference(PREF_TOUCH)).setEntries(R.array.pref_touch_entries);
+            ((ListPreference)findPreference(PREF_TOUCH)).setEntryValues(R.array.pref_touch_values);
+
             if(getIndexOf(prefs.getString(PREF_TOUCH, res.getString(R.string.pref_touch_default)), res.getStringArray(R.array.pref_touch_values)) == -1) {
                 ((ListPreference)findPreference(PREF_TOUCH)).setValue(res.getString(R.string.pref_touch_default));
             }
-            ((ListPreference)findPreference(PREF_TOUCH)).setEntries(R.array.pref_touch_entries);
 
         } else {
             findPreference(PREF_BLACK_WHITE).setSummary(R.string.pref_black_white_colorful_summary);
             ((ListPreference)findPreference(PREF_TOUCH)).setEntries(R.array.pref_touch_entries_color);
+            ((ListPreference)findPreference(PREF_TOUCH)).setEntryValues(R.array.pref_touch_values_color);
+
         }
 
         String touchmode = prefs.getString(PREF_TOUCH, res.getString(R.string.pref_touch_default));
@@ -74,7 +77,6 @@ public class PreferencesActivity extends PreferenceActivity implements SharedPre
         findPreference(PREF_TOUCH).setSummary(res.getStringArray(R.array.pref_touch_entries_color)[touchmodeIndex]);
         findPreference(PREF_PIXEL).setSummary(res.getStringArray(R.array.pref_pixel_entries)[pixelsizeIndex]);
         findPreference(PREF_FRAME).setSummary(res.getStringArray(R.array.pref_frame_entries)[framerateIndex]);
-
 
     }
 
